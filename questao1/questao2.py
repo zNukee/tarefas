@@ -1,15 +1,12 @@
-def calcular_gotas(concentracao, peso, dose_por_kg):
-    dose_total = (peso * dose_por_kg) / concentracao
-    quantidade_gotas = dose_total * 20  # 1 ml equivale a aproximadamente 20 gotas
-    return quantidade_gotas
+def converter_copos_para_ml(quantidade_copos):
+    quantidade_ml = quantidade_copos * 200
+    return quantidade_ml
 
 # Solicitar entrada do usuário
-concentracao = float(input("Digite a concentração do medicamento em mg/ml: "))
-peso = float(input("Digite o peso da criança em kg: "))
-dose_por_kg = float(input("Digite a dose recomendada em mg por kg: "))
+quantidade_copos = float(input("Digite a quantidade de copos: "))
 
-# Calcular quantidade de gotas
-gotas_necessarias = calcular_gotas(concentracao, peso, dose_por_kg)
+# Converter copos para mililitros
+quantidade_ml = converter_copos_para_ml(quantidade_copos)
 
 # Exibir resultado
-print("A quantidade de gotas necessárias é:", gotas_necessarias)
+print("A quantidade correspondente em mililitros é:", quantidade_ml, "ml")
